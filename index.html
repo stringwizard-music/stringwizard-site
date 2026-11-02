@@ -184,19 +184,13 @@ footer nav a{color:var(--dim)}
       </div>
       <div class="stats">
         <div><b>30k</b><small>followers</small></div>
-        <div><b class="placeholder" style="font-size:2.2rem;border:0;padding:0">—</b><small>covers recorded</small></div>
         <div><b>4</b><small>platforms</small></div>
       </div>
     </div>
     <aside class="stream-card" aria-label="Stream schedule">
-      <div class="live"><i></i> Next live session</div>
-      <h3>Requests &amp; chill: OSRS soundtrack night</h3>
-      <div class="sched num">
-        <div><span>Tue</span><span>8:00 PM ET</span></div>
-        <div><span>Thu</span><span>8:00 PM ET</span></div>
-        <div><span>Sun</span><span>3:00 PM ET</span></div>
-      </div>
-      <p class="muted" style="font-size:.9rem">Example schedule. Swap in your real days.</p>
+      <div class="live"><i></i> Live on Twitch</div>
+      <h3>Game music, requests and RuneScape</h3>
+      <p class="muted">Follow to get a notification every time I go live, and bring your song requests.</p>
       <a class="btn gold" href="https://twitch.tv/thestringwizard" target="_blank" rel="noopener" style="justify-content:center">Follow on Twitch</a>
     </aside>
   </div>
@@ -206,7 +200,7 @@ footer nav a{color:var(--dim)}
   <div class="wrap">
     <div class="ch-head">
       <div><p class="eyebrow">Chapter I · Listen</p><h2>Latest covers</h2></div>
-      <p class="muted">Every video here should link to YouTube, where views earn ad revenue and feed the algorithm.</p>
+      <p class="muted">Fresh covers from Azeroth and Gielinor. Tap any one to watch it on YouTube.</p>
     </div>
     <div class="tracks">
       <a class="track" href="https://www.youtube.com/shorts/jlW4HgixWys" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
@@ -229,7 +223,7 @@ footer nav a{color:var(--dim)}
   <div class="wrap">
     <div class="ch-head">
       <div><p class="eyebrow">Chapter II · Support</p><h2>Join the guild</h2></div>
-      <p class="muted">Monthly members are the steadiest income a creator your size can build. Three tiers is plenty to start.</p>
+      <p class="muted">Members keep the music going. Pick a tier for Discord perks, early covers and a say in what I play next.</p>
     </div>
     <div class="tiers">
       <div class="tier">
@@ -250,11 +244,6 @@ footer nav a{color:var(--dim)}
         <ul><li>Everything in Wizard</li><li>One guaranteed song request per quarter</li><li>Quarterly live Q&amp;A call</li></ul>
         <a class="btn ghost" href="https://stringwizard-jxg-shop.fourthwall.com/supporters/payments/checkout?plan=plan_LQyAoV7X29eOs8N62xE3Bn9m" target="_blank" rel="noopener">Become an Archmage</a>
       </div>
-    </div>
-    <div class="goal">
-      <div class="goal-row"><span>Community quest: full orchestral Harmony arrangement</span><span class="num">64 / 100 members</span></div>
-      <div class="bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"><i></i></div>
-      <p class="muted" style="font-size:.9rem">Example goal. A visible target turns casual fans into members.</p>
     </div>
   </div>
 </section>
@@ -331,29 +320,13 @@ footer nav a{color:var(--dim)}
       </div>
       <dl aria-label="Audience snapshot">
         <dt>Total followers</dt><dd>~30,000</dd>
-        <dt>TikTok</dt><dd class="muted"><span class="placeholder">count</span></dd>
-        <dt>YouTube</dt><dd class="muted"><span class="placeholder">count</span></dd>
-        <dt>Instagram</dt><dd class="muted"><span class="placeholder">count</span></dd>
-        <dt>Twitch</dt><dd class="muted"><span class="placeholder">count</span></dd>
-        <dt>Core audience</dt><dd>MMO players, 18–34</dd>
+        <dt>Platforms</dt><dd>TikTok, YouTube, Instagram, Twitch</dd>
+        <dt>Content</dt><dd>Video game music covers and live streams</dd>
       </dl>
     </div>
   </div>
 </section>
 
-<section class="ch" style="border-bottom:0">
-  <div class="wrap news">
-    <p class="eyebrow">The scroll</p>
-    <h2>Get new covers by email</h2>
-    <p class="muted" style="max-width:52ch">An email list is the one audience no algorithm can take away. One message when a cover drops, nothing else.</p>
-    <form class="sign" id="sign">
-      <label for="email" style="position:absolute;left:-9999px">Email address</label>
-      <input id="email" type="email" required placeholder="you@example.com" autocomplete="email">
-      <button class="btn gold" type="submit">Subscribe</button>
-    </form>
-    <p class="ok" id="ok" hidden>You're on the list. (Preview only: connect a mailing service to make this real.)</p>
-  </div>
-</section>
 </main>
 
 <footer>
@@ -364,7 +337,6 @@ footer nav a{color:var(--dim)}
 </footer>
 
 <script>
-document.getElementById('sign').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').hidden=false;});
 document.getElementById('copy').addEventListener('click',e=>{
   const t=document.getElementById('mail').textContent;
   navigator.clipboard.writeText(t).then(()=>{e.target.textContent='Copied';}).catch(()=>{
