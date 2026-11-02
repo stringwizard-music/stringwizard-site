@@ -188,8 +188,17 @@ footer nav a{color:var(--dim)}
       </div>
     </div>
     <aside class="stream-card" aria-label="Stream schedule">
-      <div class="live"><i></i> Live on Twitch</div>
-      <h3>Game music, requests and RuneScape</h3>
+      <div id="next-stream" data-ends="2026-11-05T04:00:00Z">
+        <div class="live"><i></i> Next live session</div>
+        <h3 style="margin-top:12px">World of Warcraft: Forever</h3>
+        <div class="sched num" style="margin-top:12px">
+          <div><span>Wednesday, Nov 4</span><span>8:00 PM ET</span></div>
+        </div>
+      </div>
+      <div id="stream-fallback" hidden>
+        <div class="live"><i></i> Live on Twitch</div>
+        <h3 style="margin-top:12px">Game music, requests and Azeroth</h3>
+      </div>
       <p class="muted">Follow to get a notification every time I go live, and bring your song requests.</p>
       <a class="btn gold" href="https://twitch.tv/thestringwizard" target="_blank" rel="noopener" style="justify-content:center">Follow on Twitch</a>
     </aside>
@@ -337,6 +346,7 @@ footer nav a{color:var(--dim)}
 </footer>
 
 <script>
+(function(){var n=document.getElementById('next-stream');if(n&&Date.now()>Date.parse(n.dataset.ends)){n.hidden=true;document.getElementById('stream-fallback').hidden=false;}})();
 document.getElementById('copy').addEventListener('click',e=>{
   const t=document.getElementById('mail').textContent;
   navigator.clipboard.writeText(t).then(()=>{e.target.textContent='Copied';}).catch(()=>{
